@@ -20,7 +20,7 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl restart node_exporter.service
-sudo cd /usr/local/bin/
+cd /usr/local/bin/
 sudo wget https://raw.githubusercontent.com/TuNGO-86/prometheus_install/main/apt.sh
 sudo chmod +x apt.sh
 cat > /etc/cron.d/prom-apt <<"EOF"
