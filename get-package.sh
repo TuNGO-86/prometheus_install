@@ -24,7 +24,7 @@ cd /usr/local/bin/
 sudo wget https://raw.githubusercontent.com/TuNGO-86/prometheus_install/main/apt.sh
 sudo chmod +x apt.sh
 cat > /etc/cron.d/prom-apt <<"EOF"
-*/30 * * * * root /usr/local/bin/apt.sh >/var/lib/node_exporter/apt.prom.new && mv /var/lib/node_exporter/apt.prom.new /var/lib/node_exporter/apt.prom
+0 0 * * 0 root /usr/local/bin/apt.sh >/var/lib/node_exporter/apt.prom.new && mv /var/lib/node_exporter/apt.prom.new /var/lib/node_exporter/apt.prom
 
 EOF
 echo "DONE!"
